@@ -4,7 +4,8 @@
     "dotenv": "^17.4.2",
     "expess": "^0.0.1-security",
     "jsonwebtoken": "^9.0.3",
-    "knex": "^3.2.9"
+    "knex": "^3.2.9",
+    "mysql2": "^3.22.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
