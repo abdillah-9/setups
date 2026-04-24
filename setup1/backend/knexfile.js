@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // Update with your config settings.
 
 /**
@@ -6,50 +8,50 @@
 module.exports = {
 
   development: {
-    client: 'mysql2',
+    client: process.env.DBCLIENT,
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.DBNAME,
+      user:     process.env.UNAME,
+      password: process.env.PWORD
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: process.env.MIGRATION_TABLE
     }
   },
 
   staging: {
-    client: 'mysql2',
+    client: process.env.DBCLIENT,
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.DBNAME,
+      user:     process.env.UNAME,
+      password: process.env.PWORD
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: process.env.MIGRATION_TABLE
     }
   },
 
   production: {
-    client: 'mysql2',
+    client: process.env.DBCLIENT,
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.DBNAME,
+      user:     process.env.UNAME,
+      password: process.env.PWORD
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: process.env.MIGRATION_TABLE
     }
   }
 
